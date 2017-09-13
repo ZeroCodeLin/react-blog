@@ -7,7 +7,7 @@ class BlogNav extends React.Component {
   }
   render(){
     return(
-      <Navbar inverse collapseOnSelect fixedTop>
+      <Navbar collapseOnSelect fixedTop>
         <Navbar.Header>
           <Navbar.Brand>
             <a href="#">桃子屯</a>
