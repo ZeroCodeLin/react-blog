@@ -1,3 +1,7 @@
-.blog-content{
-  padding-top:50px;
+body{
+  background: #f6f6f6;
+}
+
+.blog-search{
+  margin-top: 15px;
 }
