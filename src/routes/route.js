@@ -3,7 +3,10 @@ import {Col} from 'react-bootstrap'
 import {BrowserRouter as Router, Route, Switch,hashHistory} from 'react-router-dom'
 import BlogNav from '../components/BlogNav'
 import Blog from '../Blog'
-import BlogSearch from '../blog/BlogSearch'
+import Home from './Home'
+// import BlogSearch from '../blog/BlogSearch'
+
+import Demo from './Demo'
 
 import './router.css'
 
@@ -15,12 +18,13 @@ function Routerss({hashHistory}) {
           <div className="container blog-content">
             <Col xs={12} md={10}>
               <Switch>
-                <Route path="/" component={Blog}/>
+                <Route path="/" component={Home}/>
 
               </Switch>
             </Col>
-            <Col xs={6} md={2} xsHidden smHidden>
-              <BlogSearch />
+            <Col xs={6} md={2} >
+              <Demo />
+              {/* <BlogSearch /> */}
             </Col>
           </div>
         </div>
