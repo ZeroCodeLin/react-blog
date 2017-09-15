@@ -15,13 +15,13 @@ function Routerss({hashHistory}) {
         <div>
           <BlogNav />
           <div className="container blog-content">
-            <Col xs={12} md={10}>
+            <Col xs={12} md={9}>
               <Switch>
                 <Route exact path="/" component={BlogList}/>
                 <Route exact path="/Detail" component={BlogDetail}/>
               </Switch>
             </Col>
-            <Col xs={6} md={2} >
+            <Col xs={6} md={3} >
               <BlogSearch />
             </Col>
           </div>

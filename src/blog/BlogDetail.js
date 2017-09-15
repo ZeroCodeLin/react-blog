@@ -19,13 +19,13 @@ class BlogDetail extends React.Component {
   render(){
     return (
       <div className="blog-information">
-        <h2 className="blog-title">标题</h2>
+        <h2 className="blog-title">测试</h2>
         <div></div>
         <div>
           <label>作者：</label><a herf='#'>lemon</a>
           <span className="blog-time">2017.06.12</span>
         </div>
-        <div className="blog-desc">描述</div>
+        <div className="blog-desc">这是个测试</div>
         <div className="blog-text">
           <code>
             var s1 = 0;
