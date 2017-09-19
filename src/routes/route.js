@@ -21,9 +21,9 @@ function Routerss({hashHistory}) {
                 <Route exact path="/Detail" component={BlogDetail}/>
               </Switch>
             </Col>
-            <Col xs={6} md={3} >
+
               <BlogSearch />
-            </Col>
+            
           </div>
         </div>
       </Router>

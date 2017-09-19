@@ -1,18 +1,10 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import {form,FormGroup,ControlLabel,FormControl,HelpBlock} from 'react-bootstrap';
+import {form,FormGroup,ControlLabel,FormControl,HelpBlock,Label,Col} from 'react-bootstrap';
 
-window.onscroll=function(){
-  var topScroll =document.body.scrollTop;//滚动的距离,距离顶部的距离
-  var bignav = document.getElementById("bignav");//获取到导航栏id
-  if(topScroll > 50){ //当滚动距离大于250px时执行下面的东西
-    bignav.style.position = 'fixed';
-    bignav.style.top = '0';
-    bignav.style.zIndex = '9999';
-  }else{//当滚动距离小于250的时候执行下面的内容，也就是让导航栏恢复原状
-    bignav.style.position = 'static';
-  }
-}
+import './BlogSearch.css'
+
+
 
 class BlogSearch extends React.Component {
   constructor(props) {
@@ -33,13 +25,28 @@ class BlogSearch extends React.Component {
   }
   render(){
     return (
-      <div id="bignav" className="blog-search">
-        <form>
-          <FormGroup>
-            <FormControl type="text" placeholder="Jane Doe" />
-          </FormGroup>
-        </form>
-      </div>
+      <Col xs={6} md={3} >
+        <div id="bignav" className="blog-search">
+          <form>
+            <FormGroup>
+              <FormControl type="text" placeholder="Jane Doe" />
+            </FormGroup>
+          </form>
+          <div className="blog-tags">
+            <Label bsStyle="info blog-tag">Info</Label>
+            <Label bsStyle="info blog-tag">Info</Label>
+            <Label bsStyle="info blog-tag">Info</Label>
+            <Label bsStyle="info blog-tag">Info</Label>
+            <Label bsStyle="info blog-tag">Info</Label>
+            <Label bsStyle="info blog-tag">Info</Label>
+            <Label bsStyle="info blog-tag">Info</Label>
+            <Label bsStyle="info blog-tag">Info</Label>
+            <Label bsStyle="info blog-tag">Info</Label>
+            <Label bsStyle="info blog-tag">Info</Label>
+
+          </div>
+        </div>
+        </Col>
     )
   }
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 import {Pagination} from 'react-bootstrap'
 
+import './BlogDetail.css'
+
 class BlogDetail extends React.Component {
   constructor(props) {
     super(props)
@@ -26,7 +28,7 @@ class BlogDetail extends React.Component {
           <span className="blog-time">2017.06.12</span>
         </div>
         <div className="blog-desc">这是个测试</div>
-        <div className="blog-text">
+        <div className="blog-list">
           <code>
             var s1 = 0;
           </code>
