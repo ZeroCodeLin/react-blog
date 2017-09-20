@@ -1,0 +1,25 @@
+.blog-information{
+  background: #ffffff;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+}
+.blog-title{
+  margin: 0 0 10px;
+}
+.blog-time{
+  margin-left: 20px;
+}
+.blog-desc{
+  margin: 10px 0;
+  background: #f6f6f6;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.blog-list{
+  margin-bottom: 10px;
+  padding:0 20px;
+}
+.blog-Page{
+  text-align: center;
+}

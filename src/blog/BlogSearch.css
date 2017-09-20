@@ -1,0 +1,11 @@
+.blog-search{
+  background: red;
+  padding: 10px 10px 0;
+}
+.blog-tags{
+  display: flex;
+  flex-wrap:wrap;
+}
+.blog-tag{
+  margin:0 10px 10px 0;
+}
