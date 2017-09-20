@@ -7,51 +7,29 @@ class BlogDetail extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      activePage:1
-    }
 
-    this.handleSelect = this.handleSelect.bind(this);
+    }
   }
-  handleSelect(eventKey) {
-    console.log(eventKey)
-    this.setState({
-      activePage:eventKey
-    })
+
+  componentDidMount (){
+      console.log(this.props.location.query);
   }
   render(){
+    const data = this.state.data;
     return (
       <div className="blog-information">
-        <h2 className="blog-title">测试</h2>
+          {/*
+            <h2 className="blog-title">{data.title}</h2>
         <div></div>
         <div>
           <label>作者：</label><a herf='#'>lemon</a>
-          <span className="blog-time">2017.06.12</span>
+          <span className="blog-time">{data.gmt_created}</span>
         </div>
-        <div className="blog-desc">这是个测试</div>
+        <div className="blog-desc">{data.description}</div>
         <div className="blog-list">
-          <code>
-            var s1 = 0;
-          </code>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
+          <div dangerouslySetInnerHTML={{__html: `${data.content}`}} />
         </div>
+          */}
       </div>
     )
   }

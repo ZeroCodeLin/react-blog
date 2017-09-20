@@ -1,14 +1,16 @@
 import React from 'react'
 import {Pagination} from 'react-bootstrap'
-
+var $ = require('jquery')
 import Blog from './Blog'
+import request from "../util/request";
 
 
 class BlogList extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      activePage:1
+        activePage:1,
+        data:[]
     }
 
     this.handleSelect = this.handleSelect.bind(this);
@@ -19,12 +21,21 @@ class BlogList extends React.Component {
       activePage:eventKey
     })
   }
+
+  componentDidMount (){
+      request('/api/blog/list').then((data) => {
+          console.log(data.data.data);
+          this.setState({
+              data: data.data.data,
+          });
+      });
+  }
   render(){
     let arr = [1,2,3,4,5,6];
     return (
       <div>
-        {arr.map(function(){
-          return <Blog />
+        {this.state.data.map(function(data){
+          return <Blog blogData={data} />
         })}
         <div className="blog-Page">
           <Pagination

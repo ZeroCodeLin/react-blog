@@ -7,46 +7,24 @@ class Blog extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-
+        data:this.props.blogData,
     }
-
   }
-
   render(){
+    const data = this.state.data;
     return (
       <div className="blog-information">
-        <h2 className="blog-title">标题</h2>
+        <h2 className="blog-title">{data.title}</h2>
         <div></div>
         <div>
           <label>作者：</label><a herf='#'>lemon</a>
-          <span className="blog-time">2017.06.12</span>
+          <span className="blog-time">{data.gmt_created}</span>
         </div>
-        <div className="blog-desc">描述</div>
+        <div className="blog-desc">{data.description}</div>
         <div className="blog-text">
-          <code>
-            var s1 = 0;
-          </code>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
-          <div>2</div>
+          <div dangerouslySetInnerHTML={{__html: `${data.content}`}} />
         </div>
-        <Button href="/Detail" bsStyle="primary">阅读全文</Button>
+        <Button href={`/Detail/${data.id}`} bsStyle="primary">阅读全文</Button>
       </div>
     )
   }

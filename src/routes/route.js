@@ -18,7 +18,7 @@ function Routerss({hashHistory}) {
             <Col xs={12} md={9}>
               <Switch>
                 <Route exact path="/" component={BlogList}/>
-                <Route exact path="/Detail" component={BlogDetail}/>
+                <Route exact path="/Detail/*" component={BlogDetail}/>
               </Switch>
             </Col>
 
