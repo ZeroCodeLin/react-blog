@@ -24,7 +24,7 @@ class Blog extends React.Component {
         <div className="blog-text">
           <div dangerouslySetInnerHTML={{__html: `${data.content}`}} />
         </div>
-        <Button href={`/Detail/${data.id}`} bsStyle="primary">阅读全文</Button>
+        <Button href={`/Detail?id=${data.id}`} bsStyle="primary">阅读全文</Button>
       </div>
     )
   }

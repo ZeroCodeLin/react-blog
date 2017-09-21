@@ -8,6 +8,7 @@ import request from "../util/request";
 class BlogList extends React.Component {
   constructor(props) {
     super(props)
+
     this.state = {
         activePage:1,
         data:[]
@@ -24,7 +25,6 @@ class BlogList extends React.Component {
 
   componentDidMount (){
       request('/api/blog/list').then((data) => {
-          console.log(data.data.data);
           this.setState({
               data: data.data.data,
           });

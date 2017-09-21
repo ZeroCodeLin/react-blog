@@ -11,22 +11,24 @@ import './router.css'
 
 function Routerss({hashHistory}) {
     return (
-      <Router history={hashHistory}>
         <div>
           <BlogNav />
           <div className="container blog-content">
             <Col xs={12} md={9}>
-              <Switch>
-                <Route exact path="/" component={BlogList}/>
-                <Route exact path="/Detail/*" component={BlogDetail}/>
-              </Switch>
+                <Router history={hashHistory}>
+                    <div>
+                        <Route exact path="/" component={BlogList}/>
+                        <Route exact path="/Detail" component={BlogDetail}/>
+                    </div>
+
+                </Router>
             </Col>
 
               <BlogSearch />
             
           </div>
         </div>
-      </Router>
+
     )
 }
 
