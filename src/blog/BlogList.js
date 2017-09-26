@@ -1,6 +1,5 @@
 import React from 'react'
 import {Pagination} from 'react-bootstrap'
-var $ = require('jquery')
 import Blog from './Blog'
 import request from "../util/request";
 
