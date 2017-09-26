@@ -10,10 +10,15 @@ class Blog extends React.Component {
         data:this.props.blogData,
     }
   }
+    componentWillReceiveProps(nextProps){
+        this.setState({
+            data:nextProps.blogData
+        })
+    }
   render(){
-    const data = this.state.data;
+    let data = this.state.data;
     return (
-      <div className="blog-information">
+      <div className="blog-information" >
         <h2 className="blog-title">{data.title}</h2>
         <div></div>
         <div>

@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import {form,FormGroup,ControlLabel,FormControl,HelpBlock,Label,Col} from 'react-bootstrap';
-
+import request from "../util/request";
 import './BlogSearch.css'
-
-
 
 class BlogSearch extends React.Component {
   constructor(props) {
@@ -13,26 +11,18 @@ class BlogSearch extends React.Component {
       value:''
     }
   }
-  getValidationState() {
-    const length = this.state.value.length;
-    if (length > 10) return 'success';
-    else if (length > 5) return 'warning';
-    else if (length > 0) return 'error';
-  }
-  handleChange(e) {
-    this.setState({ value: e.target.value });
-    console.log(e.target.value);
-  }
+
   render(){
     return (
       <Col xs={6} md={3} >
         <div id="bignav" className="blog-search">
           <form>
             <FormGroup>
-              <FormControl type="text" placeholder="Jane Doe" />
+              <FormControl type="text" placeholder="收缩关键词" name="text" />
             </FormGroup>
           </form>
-          <div className="blog-tags">
+            {/*
+                <div className="blog-tags">
             <Label bsStyle="info blog-tag">Info</Label>
             <Label bsStyle="info blog-tag">Info</Label>
             <Label bsStyle="info blog-tag">Info</Label>
@@ -45,6 +35,7 @@ class BlogSearch extends React.Component {
             <Label bsStyle="info blog-tag">Info</Label>
 
           </div>
+            */}
         </div>
         </Col>
     )

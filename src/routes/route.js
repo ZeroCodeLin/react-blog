@@ -23,9 +23,7 @@ function Routerss({hashHistory}) {
 
                 </Router>
             </Col>
-
               <BlogSearch />
-            
           </div>
         </div>
 
