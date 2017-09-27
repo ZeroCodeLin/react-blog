@@ -14,7 +14,7 @@ class BlogSearch extends React.Component {
 
   render(){
     return (
-      <Col xs={6} md={3} >
+      <Col xs={6} md={3} smHidden={true} xsHidden={true}>
         <div id="bignav" className="blog-search">
           <form>
             <FormGroup>
